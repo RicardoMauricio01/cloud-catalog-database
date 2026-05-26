@@ -1,67 +1,42 @@
-database/
-│
-├── README.md
-├── .gitignore
-├── .env.example
-│
-├── connection/
-│   └── db.js
-│
-├── docs/
-│   └── database_description.md
-│
-└── scripts/
-    ├── 01_create_database.sql
-    ├── 02_create_tables.sql
-    ├── 03_seed_data.sql
-    └── 04_queries_test.sql
+Aquí tienes una versión **mínima, limpia y correcta** del README:
 
+````md
+# Inicializar base de datos
 
+## Acceder a PostgreSQL
 
+```bash
+    sudo -u postgres psql
+````
 
+---
 
+## Ejecutar scripts en orden
 
+Dentro de `psql`, ejecutar:
 
-/home/icin/app/dev/
-│
-├── frontend/
-│   ├── src/
-│   ├── public/
-│   ├── package.json
-│   └── vite.config.js
-│
-├── backend/
-│   ├── server.js
-│   ├── package.json
-│   ├── package-lock.json
-│   │
-│   ├── config/
-│   │   └── db.js
-│   │
-│   ├── routes/
-│   │
-│   ├── controllers/
-│   │
-│   ├── middleware/
-│   │
-│   ├── .env.development
-│   ├── .env.production
-│   └── .gitignore
-│
-└── database/
-    │
-    ├── README.md
-    ├── .env.example
-    ├── .gitignore
-    │
-    ├── connection/
-    │   └── db.js
-    │
-    ├── docs/
-    │   └── database_description.md
-    │
-    └── scripts/
-        ├── 01_create_database.sql
-        ├── 02_create_tables.sql
-        ├── 03_seed_data.sql
-        └── 04_queries_test.sql
+```sql
+\i scripts/01_create_database.sql
+\i scripts/02_create_tables.sql
+\i scripts/03_seed_data.sql
+```
+
+---
+
+## Verificar
+
+```sql
+\l        -- listar bases de datos
+\c app_dev_db   -- conectarse a la base de datos
+\dt       -- listar tablas
+SELECT * FROM usuarios; -- ver datos
+```
+
+---
+
+## Importante
+
+* Ejecutar los scripts en orden
+* El seed es opcional en producción
+
+```
