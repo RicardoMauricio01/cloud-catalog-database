@@ -1,1 +1,3 @@
-CREATE DATABASE app_dev_db;
+CREATE DATABASE app_dev_db
+WITH
+    ENCODING 'UTF8';
