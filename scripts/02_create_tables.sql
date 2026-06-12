@@ -3,7 +3,10 @@ CREATE TABLE
         id SERIAL PRIMARY KEY,
         username VARCHAR(50) UNIQUE NOT NULL,
         password VARCHAR(255) NOT NULL,
-        fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        email VARCHAR(100) UNIQUE NOT NULL,
+        reset_password_token VARCHAR (255),
+        reset_password_expires TIMESTAMP,
     );
 
 CREATE TABLE
