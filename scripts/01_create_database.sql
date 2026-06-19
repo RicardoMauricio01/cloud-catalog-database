@@ -1,3 +1,3 @@
 CREATE DATABASE app_dev_db
 WITH
-    ENCODING 'UTF8';
+    OWNER = icin ENCODING = 'UTF8' TEMPLATE = template0;
