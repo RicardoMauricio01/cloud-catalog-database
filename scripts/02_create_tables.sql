@@ -5,7 +5,7 @@ CREATE TABLE
         password VARCHAR(255) NOT NULL,
         fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         email VARCHAR(100) UNIQUE NOT NULL,
-        reset_password_token VARCHAR (255),
+        reset_password_token VARCHAR(255),
         reset_password_expires TIMESTAMP
     );
 
@@ -26,5 +26,6 @@ CREATE TABLE
         categoria_id INTEGER,
         activo BOOLEAN DEFAULT TRUE,
         created_at TIMESTAMP DEFAULT NOW (),
-        updated_at TIMESTAMP DEFAULT NOW ()
+        updated_at TIMESTAMP DEFAULT NOW (),
+        CONSTRAINT fk_categoria FOREIGN KEY (categoria_id) REFERENCES categorias (id) ON DELETE SET NULL
     );

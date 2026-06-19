@@ -4,92 +4,164 @@ VALUES
     ('admin', '$2b$10$HASH');
 
 INSERT INTO
+    categorias (nombre)
+VALUES
+    ('Abarrotes'),
+    ('Limpieza'),
+    ('Cuidado Personal'),
+    ('Bebidas'),
+    ('Snacks'),
+    ('Lácteos');
+
+INSERT INTO
     productos (
         nombre,
         descripcion,
         precio,
         stock,
         imagen_url,
+        categoria_id,
         activo
     )
 VALUES
+    -- Abarrotes
     (
-        'Teclado Mecánico RGB',
-        'Teclado gamer con switches blue y luces RGB.',
-        45990,
-        12,
-        NULL,
-        true
-    ),
-    (
-        'Mouse Gamer Pro',
-        'Mouse ergonómico de 12000 DPI.',
-        24990,
+        'Arroz Tucapel 1kg',
+        'Arroz grano largo 1kg',
+        1200,
         20,
         NULL,
+        1,
         true
     ),
     (
-        'Audífonos Bluetooth',
-        'Audífonos inalámbricos con cancelación de ruido.',
-        39990,
-        8,
+        'Leche Entera 1L',
+        'Leche líquida entera 1 litro',
+        1500,
+        20,
         NULL,
+        1,
         true
     ),
     (
-        'Monitor 24 pulgadas',
-        'Monitor Full HD de 75Hz.',
-        129990,
+        'Aceite Natura 900ml',
+        'Aceite vegetal',
+        1800,
+        20,
+        NULL,
+        1,
+        true
+    ),
+    (
+        'Azúcar Iansa 1kg',
+        'Azúcar granulada',
+        1100,
+        20,
+        NULL,
+        1,
+        true
+    ),
+    (
+        'Porotos Banquete 1kg',
+        'Porotos seleccionados',
+        1300,
+        20,
+        NULL,
+        1,
+        true
+    ),
+    (
+        'Fideos Carozzi 400g',
+        'Pasta espirales',
+        950,
+        20,
+        NULL,
+        1,
+        true
+    ),
+    (
+        'Atún San José 170g',
+        'Atún en conserva',
+        1250,
+        20,
+        NULL,
+        1,
+        true
+    ),
+    (
+        'Salsa de Tomate 200g',
+        'Salsa lista para cocinar',
+        750,
+        20,
+        NULL,
+        1,
+        true
+    ),
+    -- Limpieza
+    (
+        'Papel Higiénico Elite',
+        'Pack 4 rollos',
+        1950,
+        20,
+        NULL,
+        2,
+        true
+    ),
+    -- Cuidado Personal
+    (
+        'Shampoo Sedal 400ml',
+        'Shampoo hidratante',
+        2600,
+        20,
+        NULL,
+        3,
+        true
+    ),
+    (
+        'Pasta Colgate',
+        'Pasta dental triple acción',
+        2200,
+        20,
+        NULL,
+        3,
+        true
+    ),
+    -- Bebidas
+    (
+        'Sprite 1.5L',
+        'Bebida gaseosa',
+        1300,
+        20,
+        NULL,
+        4,
+        true
+    ),
+    -- Snacks
+    (
+        'Oreo Original',
+        'Galletas rellenas',
+        800,
+        20,
+        NULL,
+        5,
+        true
+    ),
+    (
+        'Papas Lays Clásicas',
+        'Snack salado',
+        1600,
+        20,
+        NULL,
+        5,
+        true
+    ),
+    -- Lácteos
+    (
+        'Queso Colun Laminado',
+        'Queso laminado 200g',
+        3200,
+        20,
+        NULL,
         6,
-        NULL,
-        true
-    ),
-    (
-        'Webcam HD',
-        'Webcam 1080p ideal para videollamadas.',
-        18990,
-        15,
-        NULL,
-        true
-    ),
-    (
-        'SSD 1TB',
-        'Unidad de estado sólido NVMe de alta velocidad.',
-        79990,
-        10,
-        NULL,
-        true
-    ),
-    (
-        'Notebook Stand',
-        'Base metálica ajustable para notebook.',
-        15990,
-        18,
-        NULL,
-        true
-    ),
-    (
-        'Micrófono USB',
-        'Micrófono condensador para streaming.',
-        34990,
-        7,
-        NULL,
-        true
-    ),
-    (
-        'Hub USB-C',
-        'Adaptador multipuerto USB-C.',
-        22990,
-        11,
-        NULL,
-        true
-    ),
-    (
-        'Parlante Bluetooth',
-        'Parlante portátil resistente al agua.',
-        27990,
-        9,
-        NULL,
         true
     );
